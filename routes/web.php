@@ -21,7 +21,7 @@ Route::get('/tasks', [TaskController::class, 'index'])->middleware('auth');
 
 Route::get('/tasks/create', [TaskController::class, 'create'])->middleware('is_admin');
 
-Route::get('/tasks/{id}', [TaskController::class, 'show'])->middleware('is_admin');
+Route::get('/tasks/{id}', [TaskController::class, 'show']);
 
 Route::post('/tasks', [TaskController::class, 'store'])->middleware('is_admin');
 
